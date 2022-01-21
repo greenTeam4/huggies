@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <footer id="footer">
     <div class="footerIn">
         <div class="footer1">
@@ -14,8 +15,8 @@
             </div>
             <div class="f_info">
                 <div class="f_info1">  
-                    대표자 : 진재승 <br>
-                    주소 : 서울시 송파구 올림픽로 300 롯데월드타워 29층<br> 
+			                    대표자 : 진재승 <br>
+			                    주소 : 서울시 송파구 올림픽로 300 롯데월드타워 29층<br> 
                     (우)05551 <span class="bar"></span>사업자번호 : 120-81-11436
                 </div>  
                 <div>

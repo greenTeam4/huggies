@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,16 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>글쓰기</title>
     
-    <link rel="icon" href="../../../resources/img/favicon_hu.png" type="image/x-icon">
+    <link rel="icon" href="../resources/img/favicon_hu.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../resources/css/header.css">
-    <link rel="stylesheet" href="../../../resources/css/board_list_write.css">
-    <link rel="stylesheet" href="../../../resources/css/footer.css">
+    <link rel="stylesheet" href="../resources/css/header.css">
+    <link rel="stylesheet" href="../resources/css/write.css">
+    <link rel="stylesheet" href="../resources/css/footer.css">
 </head>
 <body>
-	<%@include file="../header/header.jsp"%>
+	<%@include file="header.jsp"%>
+	
 	<div id="board_list_write">
         <h2>글쓰기</h2>
         
@@ -45,10 +47,11 @@
             </div>
 
             <div class="write__back">
-                <a href="board_list.html">돌아가기</a>
+                <a href="/list">돌아가기</a>
             </div>
         </form>
     </div>
-    <%@ include file="../footer/footer.jsp" %>
+    
+    <%@ include file="footer.jsp" %>
 </body>
 </html>
