@@ -46,4 +46,20 @@
 		from huggiest
 		where bno=#{bno}
 	</select>
+	
+	<update id="modify">
+		update huggiest
+		set title=#{title},
+			content=#{content}
+		where bno=#{bno}
+	</update>
+	
+	<delete id="remove">
+		delete from huggiest
+		where bno=#{bno}
+	</delete>
+	
+	
+	
+	
 </mapper>

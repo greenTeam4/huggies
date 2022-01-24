@@ -111,7 +111,7 @@
 </body>
 </html>
 
-					<tr class="board_notice">
+					<<!-- tr class="board_notice">
 		                <th class="bd_notice">
 		                    <span>notice</span>
 		                </th>
@@ -187,4 +187,4 @@
 		                <th class="bd_name">김이박</th>
 		                <th class="bd_date">2021-22-25</th>
 		                <th class="bd_view">19</th>
-		            </tr>
+		            </tr> -->

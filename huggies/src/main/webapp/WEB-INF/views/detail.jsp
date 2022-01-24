@@ -41,9 +41,13 @@
 	                <a href="#"><i class="fas fa-print fa-2x"></i></a>
 	            </div>
 	        </div>
-	
+			
 	        <div class="board__content">
 	            ${detail.content}
+	            <div class="board__btns">
+	            	<a href="/modify?bno=${detail.bno}">수정</a>
+	            	<a href="/remove?bno=${detail.bno}">삭제</a>
+	            </div>
 	        </div>
 	        
 	        <div class="board__list">
