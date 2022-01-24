@@ -28,11 +28,11 @@
 	    <div class="board__in">
 	        <div class="board__header">
 	            <div class="board__left">
-	                <h2><span class="boardName">&lt공지사항&gt</span> 제품 교환 및 환불 안내</h2>
+	                <h2><span class="boardName">&lt${detail.category}&gt</span> ${detail.title}</h2>
 	                <p>
-	                    <span>관리자 &nbsp</span>
-	                    <span>2022-01-01 11:58 &nbsp</span>
-	                    <span>조회 486</span>
+	                    <span>${detail.writer} &nbsp</span>
+	                    <span>${detail.regdate} &nbsp</span>
+	                    <span>조회 ${detail.cnt}</span>
 	                </p>
 	            </div>
 	
@@ -43,9 +43,7 @@
 	        </div>
 	
 	        <div class="board__content">
-	            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, nulla expedita reiciendis maxime, ducimus quis iure voluptatibus ex deserunt odit quam rerum id at dolor quisquam itaque, asperiores eos repudiandae?
-	            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae suscipit libero aut ea optio ut officia, laboriosam unde cupiditate accusantium dolores obcaecati facere magnam, tenetur omnis numquam odio repellat similique.
-	            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur reprehenderit quas eaque. Tempore quos sed sit voluptates iure? Esse tempora nesciunt repellat quibusdam alias, aut officiis! Consequuntur quaerat placeat aliquam?
+	            ${detail.content}
 	        </div>
 	        
 	        <div class="board__list">

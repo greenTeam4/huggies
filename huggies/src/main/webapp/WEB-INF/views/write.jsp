@@ -23,22 +23,22 @@
 	<div id="board_list_write">
         <h2>글쓰기</h2>
         
-        <form class="write__in">
+        <form class="write__in" action="/write" method="post">
             <div class="write__header">
                 <div class="write__header-select">
-                    <select>
-                        <option>공지사항(관리자만 선택 가능합니다)</option>
-                        <option selected>주문/결제</option>
-                        <option>배송</option>
-                        <option>환불/교환/반품</option>
-                        <option>상품</option>
+                    <select name="category">
+                        <option value="notice">공지사항(관리자만 선택 가능합니다)</option>
+                        <option value="order/pay" selected>주문/결제</option>
+                        <option value="delivery">배송</option>
+                        <option value="refund/exchange/return">환불/교환/반품</option>
+                        <option value="goods">상품</option>
                     </select>
                 </div>
-                <input class="write__header-title" type="text" placeholder="제목을 입력하세요." required>
+                <input name="title" maxlength="50" class="write__header-title" type="text" placeholder="제목을 입력하세요." required>
             </div>
 
             <div class="write__box">
-                <textarea cols="147" rows="30" required></textarea>
+                <textarea maxlength="1000" name="content" cols="147" rows="30" required></textarea>
             </div>
 
             <div class="write__btns">

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+   
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,9 +49,9 @@
 		
 		<div class="board_main" >
 		    <div class="write">
-		        <form action="board_list_write.html">
+		        <a href="/write">
 		            <button class="btn_write">글쓰기</button>
-		        </form>
+		        </a>
 		    </div>
 		    <table class="board_list">
 		        <thead >
@@ -61,13 +63,60 @@
 		                <th class="th_view">조회</th>
 		            </tr>
 		        </thead>
+		        
 		        <tbody class="bd_tbody">
-		            <tr class="board_notice">
+		            <c:forEach items="${list}" var="board">
+		            	<c:choose>
+			            	<c:when test="${board.category eq '공지사항'}">
+				            	<tr class="board_notice">
+				            		<th class="bd_notice"><span>${board.category}</span></th>
+				            		<th class="bd_title"><a href="/detail?bno=${board.bno}">${board.title}</a></th>
+				            		<th class="bd_name">${board.writer}</th>
+				            		<th class="bd_date">${board.regdate}</th>
+				            		<th class="bd_view">${board.cnt}</th>
+				            	</tr>
+			            	</c:when>
+			            	<c:otherwise>
+				            	<tr>
+				            		<th class="bd_Category"><span>[${board.category}]</span></th>
+				            		<th class="bd_title"><a href="/detail?bno=${board.bno}">${board.title}</a></th>
+				            		<th class="bd_name">${board.writer}</th>
+				            		<th class="bd_date">${board.regdate}</th>
+				            		<th class="bd_view">${board.cnt}</th>
+				            	</tr>
+			            	</c:otherwise>
+		            	</c:choose>
+		            </c:forEach>
+		        </tbody>
+		    </table>
+		</div><!--board_main--> 
+		
+		<div class="prev_next">
+		    <ul class="inner_next">
+		        <li class="link_page on"><a href="#">1</a></li>
+		        <li class="link_page"><a href="#">2</a></li>
+		        <li class="link_page"><a href="#">3</a></li>
+		        <li class="link_page"><a href="#">4</a></li>
+		        <li class="link_page"><a href="#">5</a></li>
+		        <li class="pgN">
+		            <a href="#">
+		                <span class="bd_next">다음</span>
+		            </a>
+		       </li>
+		    </ul>
+		</div><!--prev_next-->
+	</div><!--contents-->
+        	
+	<%@include file="footer.jsp" %>
+</body>
+</html>
+
+					<tr class="board_notice">
 		                <th class="bd_notice">
 		                    <span>notice</span>
 		                </th>
 		                <th class="bd_title">
-		                    <a href="board_list_page.html">공지 사항</a>
+		                    <a href="/detail">공지 사항</a>
 		                </th>
 		                <th class="bd_name">관리자</th>
 		                <th class="bd_date">2021-22-25</th>
@@ -78,7 +127,7 @@
 		                    <span>notice</span>
 		                </th>
 		                <th class="bd_title">
-		                    <a href="board_list_page.html">공지 사항</a>
+		                    <a href="/detail">공지 사항</a>
 		                </th>
 		                <th class="bd_name">관리자</th>
 		                <th class="bd_date">2021-22-25</th>
@@ -139,26 +188,3 @@
 		                <th class="bd_date">2021-22-25</th>
 		                <th class="bd_view">19</th>
 		            </tr>
-		        </tbody>
-		    </table>
-		</div><!--board_main--> 
-		
-		<div class="prev_next">
-		    <ul class="inner_next">
-		        <li class="link_page on"><a href="#">1</a></li>
-		        <li class="link_page"><a href="#">2</a></li>
-		        <li class="link_page"><a href="#">3</a></li>
-		        <li class="link_page"><a href="#">4</a></li>
-		        <li class="link_page"><a href="#">5</a></li>
-		        <li class="pgN">
-		            <a href="#">
-		                <span class="bd_next">다음</span>
-		            </a>
-		       </li>
-		    </ul>
-		</div><!--prev_next-->
-	</div><!--contents-->
-        	
-	<%@include file="footer.jsp" %>
-</body>
-</html>

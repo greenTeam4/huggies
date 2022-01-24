@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.huggies.mapper.BoardMapper">
+	<insert id="write">
+		insert huggiest(category, title, content, pin)
+		value (
+		<choose>
+			<when test="category == 'notice'.toString()">
+				'공지사항'
+			</when>
+			<when test="category == 'order/pay'.toString()">
+				'주문/결제'
+			</when>
+			<when test="category == 'delivery'.toString()">
+				'배송'
+			</when>
+			<when test="category == 'refund/exchange/return'.toString()">
+				'환불/교환/반품'
+			</when>
+			<when test='category == "goods"'>
+				'상품'
+			</when>
+		</choose>
+		,#{title},#{content},
+		<choose>
+			<when test="category == 'notice'.toString()">
+				1
+			</when>
+			<otherwise>
+				0
+			</otherwise>
+		</choose>
+		)
+	</insert>
+	
+	<select id="list" resultType="org.huggies.domain.BoardDTO">
+		select *
+		from huggiest
+		order by pin desc, regdate desc
+	</select>
+	
+	<select id="detail" resultType="org.huggies.domain.BoardDTO">
+		select *
+		from huggiest
+		where bno=#{bno}
+	</select>
+</mapper>
