@@ -18,28 +18,7 @@
 </head>
 <body>
   <div id="wrap">
-    <header id="header">
-      <div class="header_in">
-          <h1 class="logo"><a href="index.html">하기스로고</a></h1>
-          <nav class="gnb">
-              <ul>
-                  <li><a href="#">브랜드스토리</a></li>
-                  <li><a href="#">제품별리스트</a></li>
-                  <li><a href="#">이벤트</a></li>
-                  <li><a href="board_list.html">고객지원 </a></li>
-              </ul>
-          </nav>
-          <div class="util">
-              <ul>
-                  <li class="login"><a href="login.html">로그인</a></li>
-                  <li class="cart">
-                      <a href="#">장바구니</a>
-                      <span class="count">0</span>
-                  </li>
-              </ul>
-          </div>
-      </div> <!-- .header_in -->
-    </header> <!-- #header -->
+	<%@include file="header.jsp"%>
 
     <div id="product_contents">   
 
@@ -127,7 +106,7 @@
         <ul class="total_item">
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img01.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img01.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -138,7 +117,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img02.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img02.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -149,7 +128,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img03.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img03.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -160,7 +139,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img04.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img04.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -171,7 +150,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img05.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img05.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -182,7 +161,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img06.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img06.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -194,7 +173,7 @@
 
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img02.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img02.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -205,7 +184,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img01.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img01.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -216,7 +195,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img05.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img05.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -227,7 +206,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img03.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img03.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -238,7 +217,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img06.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img06.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -249,7 +228,7 @@
           </li>
           <li>
             <a href="">
-              <p class="pd_img"><img src="./img/pd_img04.jpg" alt=""></p>
+              <p class="pd_img"><img src="../resources/img/pd_img04.jpg" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">
                        하기스 맥스드라이 2단계 공용<br>
@@ -289,44 +268,7 @@
     </div> <!--product_contents-->
 
 
-    <footer id="footer">
-      <div class="footerIn">
-          <div class="footer1">
-              <div class="f_logo">유한킴벌리로고</div>
-              <div class="f_sc">
-                  <ul>
-                      <li class="f_scQ">제품관련 문의</li>
-                      <li class="f_scT">080-022-7007</li>
-                      <li class="f_scQ">회사관련 문의</li>
-                      <li class="f_scT">02-6411-0100</li>
-                  </ul>
-              </div>
-              <div class="f_info">
-                  <div class="f_info1">  
-                      대표자 : 진재승 <br>
-                      주소 : 서울시 송파구 올림픽로 300 롯데월드타워 29층<br> 
-                      (우)05551 <span class="bar"></span>사업자번호 : 120-81-11436
-                  </div>  
-                  <div>
-                      <span class="etc1"><a href="#">찾아오시는 길</a></span>
-                      <span class="etc2"><a href="#">개인정보 처리방침</a></span>
-                  </div>
-              </div><!--f_info-->
-              
-          </div>
-          <div class="footer2">
-              <div class="f_sns">
-                  <ul>
-                      <li class="sns_f"><a href="#">페이스북</a></li>
-                      <li class="sns_i"><a href="#">인스타그램</a></li>
-                      <li class="sns_y"><a href="#">유튜브</a></li>
-                      <li class="sns_b"><a href="#">블로그</a></li>
-                  </ul>
-              </div>
-              <div class="copyright">Copyright © Yuhan-Kimberly. All right Reserved.</div>
-          </div>
-      </div> <!-- .footerIn -->
-    </footer> <!-- #footer -->
+    <%@ include file="footer.jsp" %>
   </div> <!--#wrap-->
 </body>
 </html>

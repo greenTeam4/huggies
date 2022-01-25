@@ -79,6 +79,7 @@ public class HuggiesController {
 	public void login() {
 	}
 	
+	// <제품 리스트 페이지>로 이동 
 	@GetMapping("product")
 	public void product() {
 		
