@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	Github practice!
+	Github practice2!
 	<%@include file="header.jsp"%>
 	
 	<div id="container">
