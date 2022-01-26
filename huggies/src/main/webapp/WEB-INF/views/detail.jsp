@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="../resources/css/footer.css">
 </head>
 <body>
-	실험!
 	<%@include file="header.jsp"%>
 	
 	<div id="board_list_page">
