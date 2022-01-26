@@ -29,7 +29,7 @@
 	<%@include file="header.jsp"%>
 	
 	<div id="container">
-		<section class="mainSlide controls">
+		<section class="mainSlide">
 			<div class="msImg">
 				<img src="../resources/img/mainslide1.png">
 				<img src="../resources/img/mainslide2.png">
