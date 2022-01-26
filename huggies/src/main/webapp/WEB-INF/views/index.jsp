@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="../resources/css/index.css">
     <link rel="stylesheet" href="../resources/css/footer.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../resources/js/container.js"></script>
     <!-- bxslider -->
+    <script src="../resources/js/container.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="../resources/js/all.min.js"></script>
@@ -26,7 +26,6 @@
 </head>
 
 <body>
-	Github practice2!
 	<%@include file="header.jsp"%>
 	
 	<div id="container">

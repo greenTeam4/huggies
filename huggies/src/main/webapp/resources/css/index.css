@@ -43,7 +43,7 @@ a{
     margin-bottom: 50px;
 }
 
-.controls .bx-prev, .controls .bx-next{
+.mainSlide .bx-prev, .mainSlide .bx-next{
     position:absolute;
     top: 47%;
     transform: translateY(-50%);
@@ -52,43 +52,53 @@ a{
     opacity:0.7;
 }
 
-.controls .bx-prev{
+.mainSlide .bx-prev{
     left: 120px;
 }
 
-.controls .bx-next{
+.mainSlide .bx-next{
     right: 120px;
 }
 
-/* .msPager{
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-    width: 100%;
+.mainSlide .bx-pager {
+    text-align: center;
+    color: #666;
+    padding-top: 20px;
 }
 
-.msPager ul{
-    display: flex;
-    justify-content: center;
-}
-
-.msPager li{
-    margin: 0 5px;
-}
-
-.msPager li a{
+.mainSlide .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
     display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    background-color: #bbb;
-    text-indent: -99999px;
+    width: 20px;
+    height: 15px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
 }
 
-.msPager .point a{
-    width: 40px;
-    background-color: #fff;
-} */
+.mainSlide .bx-pager.bx-default-pager a:hover{
+    background: #e43530;
+}
+
+.mainSlide .bx-pager.bx-default-pager a.active,
+.mainSlide .bx-pager.bx-default-pager a:focus {
+    background: #e43530;
+    width: 30px;
+}
+
+.mainSlide .bx-pager-item {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.mainSlide .bx-pager{
+    position: absolute;
+    top: 90%;
+    right: 50%;
+}
 
 
 
