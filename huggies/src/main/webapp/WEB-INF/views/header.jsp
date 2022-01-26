@@ -10,7 +10,7 @@
                 <li><a href="/product">제품별리스트</a></li>
                 <li><a href="#">이벤트</a></li>
                 <li><a href="board_list.html">고객지원 </a></li>
-            </ul>
+            </ul> 
         </nav>
         <div class="util">
             <ul>

@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	실험2입니다!!!
+	실험2입니다!!! 
 	<%@include file="header.jsp"%>
 	
 	<div id="container">
