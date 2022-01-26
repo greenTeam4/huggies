@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
     
 <header id="header">
-	수정!
     <div class="header_in">
         <h1 class="logo"><a href="index.html">하기스로고</a></h1>
         <nav class="gnb">
