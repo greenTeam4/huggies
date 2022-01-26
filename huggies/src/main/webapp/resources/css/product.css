@@ -1,0 +1,286 @@
+@charset "UTF-8";
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color:#333;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hide {
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+    width: 1px;
+    height: 1px;
+}
+
+/* p_title */
+
+#product_contents{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.product_top{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding-top: 10px;
+}
+
+.p_title{
+    padding-top: 10px;
+    height: 60px;
+}
+
+.pt{
+    display: flex;
+    justify-content: center;
+}
+
+.pt a{
+    display: block;
+    color: #333;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+/* list_tab */
+
+.list_tab{
+    width: 85%;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
+.item_btn{
+    margin:3px 5px;
+}
+
+
+.item_btn a{
+    display: block;
+    color: #555;
+}
+
+
+.item_btn .on span{
+    color: #fff;
+    background-color: #e43530;
+}
+
+.item_btn a span{
+    display: block;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+/* pd_sh */
+
+
+
+
+.pd_sh{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 200px;
+    height: 100px;
+    border-radius: 25px;
+    border: 1px dotted rgb(255, 218, 159);
+    background-color: rgb(252, 240, 221);
+}
+
+.btn_txt{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.pd_field {
+    border: 0;
+}
+
+.pd_field legend{
+    display: none;
+}
+
+
+.search_product{
+    margin-left: 15px;
+    width: 150px;
+    height: 27px;
+    border-radius: 30px;
+    padding-left: 20px;
+    border: solid 1px #e43530;
+}
+
+.btn_search{
+    position: absolute;
+    top: 53px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.btn_search .sch_icon{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon_search.png);
+    background-color: #e43530;
+    background-size: 100% auto;
+    background-position: center;
+    text-indent: -9999999px;
+    cursor: pointer;
+}
+
+/* product_main */
+
+
+/* search_info */
+
+.search_info select{
+    width: 130px;
+    height: 35px;
+    padding: 4px 10px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+}
+
+
+/* total_item */
+
+
+.total_item{
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.total_item li{
+    box-sizing: border-box;
+    width: 24%;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+
+.pd_txt{
+    display:block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.pd_txt span{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+
+.total_item  li:hover .pd_txt{
+    top:50%;
+}
+
+.pd_img img{
+    transition: transform 1s;
+    width: 100%;
+    height: auto;
+}
+
+
+.pd_name{
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #fff;
+}
+
+/* prev_next */
+
+
+.prev_next {
+    width: 100%;
+    margin: 30px 0 50px 0;
+}
+
+.inner_next{
+    display: flex;
+    justify-content: center;  
+}
+
+.link_page , .pgN{
+    margin: 0 10px;
+}
+
+.link_page a{
+    display: inline-block;
+    width: 20px;
+    color: #555;
+}
+
+.link_page a:hover{
+    text-decoration: underline;
+}
+
+.pgN a{
+    display: inline-block;
+    width: 30px;
+    color: #555;
+    padding-right: 20px;
+    background-image: url(../img/page_next.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.pgN a:hover{
+    text-decoration: underline;
+}
+
+.on a{
+   text-decoration: underline;
+   color: #e43530; 
+}
