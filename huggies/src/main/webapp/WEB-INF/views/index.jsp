@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	실험2입니다!!! 
+	Github practice!
 	<%@include file="header.jsp"%>
 	
 	<div id="container">
