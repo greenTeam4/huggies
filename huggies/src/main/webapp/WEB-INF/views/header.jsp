@@ -22,9 +22,13 @@
                     <span class="count">0</span>
                 </li>
             </ul>
+            <div class="loginjoin">
+                <div><a href="login.html">로그인</a></div> 
+                <span></span> 
+                <div><a href="join.html">회원가입</a></div>
+       		</div>
         </div>
-        <div class="loginjoin">
-            <a href="login.html">로그인</a> <span></span> <a href="join.html">회원가입</a>
         </div>
+        
     </div> <!-- .header_in -->
 </header> <!-- #header -->

@@ -42,6 +42,7 @@ a{
 }
 
 #header {
+    position: relative;
     margin-top: 10px;
 }
 
@@ -83,6 +84,10 @@ a{
 .gnb li a:hover {
     font-weight: 700;
     color: #e43530;
+}
+
+.util{
+    position: relative;
 }
 
 .util ul{
@@ -134,12 +139,22 @@ a{
 
 .loginjoin{
     position: absolute;
-    top: 25px;
-    right: 380px;
+    top: -5px;
+    right: -20px;
+    width: 100px;
+    display: flex;
 }
 
 .loginjoin a{
     font-size: 13px;
     font-weight: 700;
     color: #333;
+}
+
+.loginjoin span{
+    display: block;
+    background-color: #333;
+    width: 1px;
+    height: 11px;
+    margin: 5px 6px 0px 7px;
 }
