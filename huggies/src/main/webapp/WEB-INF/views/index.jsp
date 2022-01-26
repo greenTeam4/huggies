@@ -16,38 +16,27 @@
     <link rel="stylesheet" href="../resources/css/header.css">
     <link rel="stylesheet" href="../resources/css/index.css">
     <link rel="stylesheet" href="../resources/css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resources/js/container.js"></script>
+    <!-- bxslider -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../resources/js/all.min.js"></script>
+    <!-- bxslider 끝-->
 </head>
 
 <body>
 	<%@include file="header.jsp"%>
 	
 	<div id="container">
-		<section class="mainSlide">
-		    <div class="msImg">
-		        <a href=""><img src="../resources/img/family3.png" alt=""></a>
-		    </div>
-		    <div class="msPager">
-		        <ul>
-		            <li class="point"><a href="#">1</a></li>
-		            <li><a href="#">2</a></li>
-		        </ul>
-		    </div><!-- .msPager -->
-		</section>
+		<section class="mainSlide controls">
+			<div class="msImg">
+				<img src="../resources/img/mainslide1.png">
+				<img src="../resources/img/mainslide2.png">
+			</div>
+         </section>
 		
-		<section class="mainSlide2 hide">
-		    <div class="msImg21">
-		        <img src="../resources/img/free.jpg" alt="">
-		    </div>
-		    <div class="msImg22">
-		        <a href="">
-		            <img src="../resources/img/IMG-Eco-Friendly-Fabric-G01.png" alt="">
-		        </a>
-		    </div>
-		    <div class="msText2">
-		        <span>하기스의</span> <br> <p>좋은 환경 프로젝트</p> <br>
-		     	 지속 가능한 세상을 만들어나갑니다
-		    </div>
-		</section><!--mainSlide2-->
+		
 		
 		<section class="certification">
 		    <h2 class="certification__title">
