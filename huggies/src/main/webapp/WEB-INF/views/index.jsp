@@ -19,6 +19,7 @@
 </head>
 
 <body>
+	실험입니다!
 	<%@include file="header.jsp"%>
 	
 	<div id="container">
