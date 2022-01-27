@@ -235,7 +235,7 @@ a{
     justify-content: center;  
 }
 
-.link_page , .pgN{
+.link_page , .pgN , pgP{
     margin: 0 10px;
 }
 
@@ -249,18 +249,22 @@ a{
     text-decoration: underline;
 }
 
-.pgN a{
+.pgN a , pgP a{
     display: inline-block;
     width: 30px;
     color: #555;
     padding-right: 20px;
-    background-image: url(../img/page_next.png);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: right;
 }
 
-.pgN a:hover{
+.pgN a{background-image: url(../img/page_next.png);}
+
+.pgP a{background-image: url(../;}
+
+
+.pgN a:hover , pgP a:hover{
     text-decoration: underline;
 }
 

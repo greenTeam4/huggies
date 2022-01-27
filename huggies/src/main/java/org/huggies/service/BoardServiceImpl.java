@@ -3,9 +3,11 @@ package org.huggies.service;
 import java.util.ArrayList;
 
 import org.huggies.domain.BoardDTO;
+import org.huggies.domain.Criteria;
 import org.huggies.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BoardServiceImpl implements BoardService{
@@ -19,14 +21,21 @@ public class BoardServiceImpl implements BoardService{
 	}
 	
 	// 게시판 목록 리스트 설계한 것을 구현
-	public ArrayList<BoardDTO> list() {
-		return bmapper.list();
+	public ArrayList<BoardDTO> list(Criteria cri) {
+		return bmapper.list(cri);
 	}
 	
-	// 게시판 상세 페이지 설계한 것을 구현
+	@Transactional
 	public BoardDTO detail(BoardDTO board) {
+		bmapper.cntupdate(board);
 		return bmapper.detail(board);
 	}
+	
+	// 게시판 페이징에 쓰일 페이징 전체
+	public int getTotalCount(Criteria cri) {
+		return bmapper.getTotalCount(cri);
+	}
+	
 	
 	// 게시판 수정 페이지 설계한 것을 구현
 	public void modify(BoardDTO board) {
@@ -37,4 +46,11 @@ public class BoardServiceImpl implements BoardService{
 	public void remove(BoardDTO board) {
 		bmapper.remove(board);
 	}
+
+	@Override
+	public void cntupdate(BoardDTO board) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

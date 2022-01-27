@@ -36,9 +36,23 @@
 	</insert>
 	
 	<select id="list" resultType="org.huggies.domain.BoardDTO">
-		select *
-		from huggiest
-		order by pin desc, regdate desc
+			select *
+			from(
+			select @rownum:=@rownum+1 as rownum, ht.* 
+			from (select @rownum:=0) as tmp,
+				  huggiest as ht
+				  
+			  <if test="keyword != null">
+				    where title like concat('%',#{keyword},'%')
+					or content like concat('%',#{keyword},'%')
+					or writer like concat('%',#{keyword},'%')
+			  </if>
+			
+			) as boardList
+	<![CDATA[
+	 	where rownum > (#{pageNum}-1)*#{amount} 
+		and rownum <= #{pageNum}*#{amount}
+	]]>
 	</select>
 	
 	<select id="detail" resultType="org.huggies.domain.BoardDTO">
@@ -60,6 +74,19 @@
 	</delete>
 	
 	
+	<select id="getTotalCount" resultType="int"> <!-- 임의로 정한 200에 대한 것 -->
+		select count(*) from huggiest
+		where title like concat('%',#{keyword},'%')
+				or content like concat('%',#{keyword},'%')
+				or writer like concat('%',#{keyword},'%')
+	</select>
+	
+	
+	<update id="cntupdate">
+		update huggiest
+		set cnt = cnt+1
+		where bno = #{bno}
+	</update>
 	
 	
 </mapper>

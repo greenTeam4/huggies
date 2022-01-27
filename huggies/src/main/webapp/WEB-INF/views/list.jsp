@@ -35,10 +35,12 @@
 		        <h2>무엇을 도와드릴까요?</h2>
 		    </div>
 		    <div class="bd_sh">
-		        <form>
+		        <form id="actionForm" action="/list" method="get">
+	    			<input type="text" name="pageNum" value="${pageMaker.cri.pageNum}">
+	         		<input type="text" name="amount" value="${pageMaker.cri.amount}">
 		            <fieldset class="bd_field">
 		                <legend>검색</legend>
-		                <input type="text" id="search_board" class="search_board" title="검색어" placeholder="궁금한 점이 있이면 검색해주세요.">
+		                <input type="text"  name="keyword" value="${pageMaker.cri.keyword}" id="search_board" class="search_board" title="검색어" placeholder="궁금한 점이 있이면 검색해주세요.">
 		                <button type="submit" class="btn_search">
 		                    <span class="sch_icon">검색</span>
 		                </button>
@@ -63,7 +65,6 @@
 		                <th class="th_view">조회</th>
 		            </tr>
 		        </thead>
-		        
 		        <tbody class="bd_tbody">
 		            <c:forEach items="${list}" var="board">
 		            	<c:choose>
@@ -89,23 +90,34 @@
 		            </c:forEach>
 		        </tbody>
 		    </table>
-		</div><!--board_main--> 
+		</div><!--board_main-->
 		
 		<div class="prev_next">
 		    <ul class="inner_next">
-		        <li class="link_page on"><a href="#">1</a></li>
-		        <li class="link_page"><a href="#">2</a></li>
-		        <li class="link_page"><a href="#">3</a></li>
-		        <li class="link_page"><a href="#">4</a></li>
-		        <li class="link_page"><a href="#">5</a></li>
-		        <li class="pgN">
-		            <a href="#">
-		                <span class="bd_next">다음</span>
-		            </a>
-		       </li>
+                <c:if test="${pageMaker.prev}">
+                   	<li class="prev paginate_button">
+                   		<a href="${pageMaker.startPage-1}" class="page-link">
+                   			<span >이전</span>
+                   		</a>
+                   	</li>
+                </c:if>	  
+		        <c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
+			   		<li class="link_page paginate_button on">
+			   			<a href="${num}" class="page-link">${num}</a>
+			   		</li>	
+		   		</c:forEach>
+		        <c:if test="${pageMaker.next}">
+		        	<li class="next paginate_button">
+			            <a href="${pageMaker.endPage+1}">
+			                <span>다음</span>
+			            </a>	
+			       </li>
+		        </c:if>
 		    </ul>
 		</div><!--prev_next-->
 	</div><!--contents-->
+	
+	
         	
 	<%@include file="footer.jsp" %>
 </body>
