@@ -235,7 +235,7 @@ a{
     justify-content: center;  
 }
 
-.link_page , .pgN , pgP{
+.link_page , .next , .prev{
     margin: 0 10px;
 }
 
@@ -245,30 +245,29 @@ a{
     color: #555;
 }
 
-.link_page a:hover{
+.link_page a:hover ,.next a:hover , .prev a:hover{
     text-decoration: underline;
 }
 
-.pgN a , pgP a{
+.next a , .prev a{
     display: inline-block;
     width: 30px;
     color: #555;
     padding-right: 20px;
     background-size: 20px;
     background-repeat: no-repeat;
-    background-position: right;
+   
 }
 
-.pgN a{background-image: url(../img/page_next.png);}
+.next a{
+	background-image: url(../img/page_next.png);
+	padding-right: 20px;
+	background-position: right;
+	}
 
-.pgP a{background-image: url(../;}
+.prev a{
+	background-image: url(../img/page_previous.png);
+	padding-left: 20px;
+	background-position: left;
+	}
 
-
-.pgN a:hover , pgP a:hover{
-    text-decoration: underline;
-}
-
-.on a{
-   text-decoration: underline;
-   color: #e43530; 
-}

@@ -29,7 +29,6 @@ public class HuggiesController {
 		System.out.println("/list="+cri);
 		
 		model.addAttribute("list", service.list(cri));
-		//pageDTO의 데이터를 jsp에 부른다
 		int total=service.getTotalCount(cri);
 		model.addAttribute("pageMaker", new pageDTO(cri,total));
 	}

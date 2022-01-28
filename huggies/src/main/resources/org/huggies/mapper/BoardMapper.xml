@@ -76,9 +76,11 @@
 	
 	<select id="getTotalCount" resultType="int"> <!-- 임의로 정한 200에 대한 것 -->
 		select count(*) from huggiest
-		where title like concat('%',#{keyword},'%')
-				or content like concat('%',#{keyword},'%')
-				or writer like concat('%',#{keyword},'%')
+		<if test="keyword != null">
+			where title like concat('%',#{keyword},'%')
+			or content like concat('%',#{keyword},'%')
+			or writer like concat('%',#{keyword},'%')
+		</if>
 	</select>
 	
 	

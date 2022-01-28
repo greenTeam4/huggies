@@ -21,4 +21,5 @@ public interface BoardMapper {
 	// 게시판 삭제 설계
 	public void remove(BoardDTO board);
 	
+
 }
