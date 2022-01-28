@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="../resources/css/header.css">
     <link rel="stylesheet" href="../resources/css/join.css">
     <link rel="stylesheet" href="../resources/css/footer.css">
+	
 </head>
-
+	<style>
+		
+	</style>
 <body>
 	<%@include file="header.jsp"%>
 	
@@ -30,63 +33,70 @@
 	        <h2>사이트 이용정보 입력</h2>
 	        <h3>* 표시는 필수 입력항목입니다</h3>
 	    </div>
-	    <table class="join_table">
-	        <tr>
-	            <th class="left">*회원명</th>
-	            <th class="right">
-	                <input type="text" class="input">
-	                <p>실명을 입력해주세요</p>
-	            </th>
-	        </tr>
-	        <tr>
-	            <th class="left">*아이디</th>
-	            <th class="right">
-	                <input type="text" class="input">&nbsp&nbsp&nbsp<button>중복체크</button>
-	                <p>영문자, 숫자만 입력가능, 최소 4자이상 입력하세요</p>
-	            </th>
-	        </tr>
-	        <tr>
-	            <th class="left">*비밀번호</th>
-	            <th class="right">
-	                <input type="password" name="" id="" class="input">
-	                <p>8자 이상 입력하세요</p>
-	            </th>
-	        </tr>
-	        <tr>
-	            <th class="left">*비밀번호 확인</th>
-	            <th class="right"><input type="password" name="" id="" class="input"></th>
-	        </tr>
-	        <tr>
-	            <th class="left">*이메일</th>
-	            <th class="right">
-	                <input type="email" class="input">&nbsp&nbsp&nbsp<button>중복체크</button>&nbsp&nbsp&nbsp
-	                <input type="checkbox" name="" id=""> &nbsp&nbspE-mail을 수신합니다.
-	            </th>
-	        </tr>
-	        <tr>
-	            <th class="left">*휴대전화</th>
-	            <th class="right">
-	                <input type="password" name="" id="" class="input">&nbsp&nbsp&nbsp
-	                <input type="checkbox" name="" id=""> &nbspSMS을 수신합니다.
-	            </th>
-	        </tr>
-	        <tr>
-	            <th class="left">가입경로</th>
-	            <th class="right">
-	                <input type="radio" name="path" class="radio"> 검색
-	                <input type="radio" name="path" class="radio"> 지인
-	                <input type="radio" name="path" class="radio"> 광고
-	                <input type="radio" name="path" class="radio"> 맘카페
-	                <input type="radio" name="path" class="radio"> 기타
-	            </th>
-	        </tr>
-	    </table>
-	    <div class="lastBtn">
-	        <button type="submit" class="submit">확인</button>
-	        <button><a href="/login">취소</a></button>
-	    </div>
+		<form action="/join" method="post">
+			<table class="join_table">
+				<tr>
+					<th class="left">*회원명</th>
+					<th class="right">
+						<input type="text" class="input" name="name" id="user_name"><label id="user_name_sp"></label>
+						<p id="user_id_name">실명을 입력해주세요</p>
+					</th>
+				</tr>
+				<tr>
+					<th class="left">*아이디</th>
+					<th class="right">
+						<input type="text" class="input" name="id" id="user_id">&nbsp&nbsp&nbsp<button>중복체크</button><label id="user_id_sp"></label>
+						<p>영문자, 숫자만 입력가능, 최소 8자이상 입력하세요</p>
+					</th>
+				</tr>
+				<tr>
+					<th class="left">*비밀번호</th>
+					<th class="right">
+						<input type="password" name="password" id="user_pw1" class="input"><label id="user_pw1_sp"></label>
+						<p>8자 이상 입력하세요</p>
+					</th>
+				</tr>
+				<tr>
+					<th class="left">*비밀번호 확인</th>
+					<th class="right">
+						<input type="password" id="user_pw2" class="input"><label id="user_pw2_sp"></label>
+						<p id="user_pw2_sp"></p>
+					</th>
+				</tr>
+				<tr>
+					<th class="left">*이메일</th>
+					<th class="right">
+						<input name="email" type="email" class="input">&nbsp&nbsp&nbsp<button>중복체크</button>&nbsp&nbsp&nbsp
+						<input type="checkbox" id=""> &nbsp&nbspE-mail을 수신합니다.
+					</th>
+				</tr>
+				<tr>
+					<th class="left">*휴대전화</th>
+					<th class="right">
+						<input type="number" name="phone" id="phone" class="input" onchange="phone()">&nbsp&nbsp&nbsp
+						<input type="checkbox" name="" id=""> &nbspSMS을 수신합니다.
+						<p>" - " 없이 입력해주세요</p><label id="user_phone_sp"></label>
+					</th>
+				</tr>
+				<tr>
+					<th class="left">가입경로</th>
+					<th class="right">
+						<input type="radio" name="path" class="radio"> 검색
+						<input type="radio" name="path" class="radio"> 지인
+						<input type="radio" name="path" class="radio"> 광고
+						<input type="radio" name="path" class="radio"> 맘카페
+						<input type="radio" name="path" class="radio"> 기타
+					</th>
+				</tr>
+			</table>
+			<div class="lastBtn">
+				<button type="submit" class="submit">확인</button>
+				<button><a href="/login">취소</a></button>
+			</div>
+		</form>
 	</div>
 	
 	<%@ include file="footer.jsp" %>
+	<script src="../resources/js/join.js"></script>
 </body>
 </html>

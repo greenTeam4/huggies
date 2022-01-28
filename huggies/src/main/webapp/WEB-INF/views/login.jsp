@@ -26,19 +26,21 @@
 	    <div class="log_in_box">
 	        <div class="member">
 	            <h2>회원 로그인</h2>
-	            <div class="member_box1">
-	                <div class="id_ps">
-	                    <div class="id_ps1"><input type="text" name="" id="" placeholder="아이디"></div>
-	                    <div><input type="password" name="" id="" placeholder="비밀번호"></div>
-	                </div>
-	                <div class="loginBtn">
-	                    <a href="">로그인</a>
-	                </div>
-	            </div>
+				<form action="/login" method="post">
+					<div class="member_box1">
+						<div class="id_ps">
+							<div class="id_ps1"><input type="text" name="id" id="" placeholder="아이디"></div>
+							<div><input type="password" name="password" id="" placeholder="비밀번호"></div>
+						</div>
+						<div class="loginBtn">
+							<button type="submit">로그인</button>
+						</div>
+					</div>
+				</form>
 	            <input type="checkbox" name="" id="" class="id_save"> 아이디 저장
 	            <div class="member_box2">
 	                <div>
-	                    <a href="./join.html">&nbsp&nbsp회원가입&nbsp&nbsp&nbsp</a>
+	                    <a href="/join">&nbsp&nbsp회원가입&nbsp&nbsp&nbsp</a>
 	                </div>
 	                <div>
 	                    <a href="">&nbsp아이디 찾기&nbsp</a>

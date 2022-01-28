@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -69,7 +68,7 @@ public class HuggiesController {
 		return "redirect:/list";
 	}
 	
-	// <회원가입 페이지>로 이동
+	/*// <회원가입 페이지>로 이동
 	@GetMapping("join")
 	public void join() {
 	}
@@ -77,7 +76,7 @@ public class HuggiesController {
 	// <로그인 페이지>로 이동
 	@GetMapping("login")
 	public void login() {
-	}
+	}*/
 	
 	// <제품 리스트 페이지>로 이동 
 	@GetMapping("product")

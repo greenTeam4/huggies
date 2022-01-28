@@ -38,6 +38,7 @@ a{
 
 .mainSlide{
     position: relative;
+    width:100%;
     height: auto;
     overflow: hidden;
     margin-bottom: 50px;

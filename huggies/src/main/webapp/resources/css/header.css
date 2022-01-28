@@ -141,7 +141,7 @@ a{
     position: absolute;
     top: -5px;
     right: -20px;
-    width: 100px;
+    width: 110px;
     display: flex;
 }
 
@@ -157,4 +157,11 @@ a{
     width: 1px;
     height: 11px;
     margin: 5px 6px 0px 7px;
+}
+
+.logout{
+	position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
 }
