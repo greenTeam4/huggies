@@ -11,7 +11,7 @@ $(document).ready(function(){
 		
 		actionForm.submit();
 	})
-// 검색한 내용물이 첫번째 페이지에 나오게
+// 검색한 내용물이 첫번째 페이지에  나오게
 	$("button[type='submit']").on("click",function(e){
 		e.preventDefault();
 
