@@ -242,8 +242,15 @@ a{
 .link_page a{
     display: inline-block;
     width: 20px;
-    color: #555;
+
 }
+
+.link_page{ color: #555;}
+
+.on{ color: #e43530;}
+
+
+
 
 .link_page a:hover ,.next a:hover , .prev a:hover{
     text-decoration: underline;
@@ -270,4 +277,6 @@ a{
 	padding-left: 20px;
 	background-position: left;
 	}
+	
+
 

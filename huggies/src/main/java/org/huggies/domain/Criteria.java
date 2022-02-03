@@ -16,8 +16,7 @@ public class Criteria {
 		this.pageNum=pageNum;
 		this.amount=amount;
 	}
-	
-	
+
 	public int getPageNum() {
 		return pageNum;
 	}
