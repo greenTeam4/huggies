@@ -159,7 +159,7 @@ a{
     border-collapse: collapse;
 }
 
-.bd_tbody tr{
+.bd_tbody tr{ 
     border-bottom: solid 1px #ddd;
     height: 100px;
 }

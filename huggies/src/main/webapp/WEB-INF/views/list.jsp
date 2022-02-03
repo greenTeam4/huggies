@@ -66,7 +66,7 @@
 		                <th class="th_view">조회</th>
 		            </tr>
 		        </thead>
-		        <tbody class="bd_tbody">
+		        <tbody class="bd_tbody"> 
 		            <c:forEach items="${list}" var="board">
 		            	<c:choose>
 			            	<c:when test="${board.category eq '공지사항'}">
