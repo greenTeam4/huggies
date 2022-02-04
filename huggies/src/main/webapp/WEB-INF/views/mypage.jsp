@@ -23,8 +23,8 @@
                 <i class="fas fa-user-circle fa-9x"></i>
                 <a href="#"><i class="fas fa-cog fa-3x"></i></a>
             </div>
-            <p><c:if test="${login!=null}"></p>
-            <p>안녕하세요</p>
+            <c:if test="${login!=null}"><p>${login.id}님 안녕하세요</p></c:if>
+            
         </div>
         <ul>
             <li class="ulf"><a href="#">나의 쇼핑</a></li>

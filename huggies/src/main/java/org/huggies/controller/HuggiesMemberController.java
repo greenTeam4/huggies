@@ -34,7 +34,7 @@ public class HuggiesMemberController {
         session.setAttribute("login", login);
         
         if(session.getAttribute("login")!=null) {
-        	return "redirect:/mypage";
+        	return "redirect:/index";
         }else{
             return "redirect:/login";
         }

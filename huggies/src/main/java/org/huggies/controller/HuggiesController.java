@@ -1,6 +1,8 @@
 package org.huggies.controller;
 
 import org.huggies.domain.BoardDTO;
+import org.huggies.domain.Criteria;
+import org.huggies.domain.pageDTO;
 import org.huggies.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,9 +24,12 @@ public class HuggiesController {
 	
 	// <게시판 목록 페이지>로 이동
 	@GetMapping("list")
-	public void list(Model model) {
-		model.addAttribute("list", service.list());
+	public void list(Criteria cri,Model model) {
+		System.out.println("/list="+cri);
 		
+		model.addAttribute("list", service.list(cri));
+		int total=service.getTotalCount(cri);
+		model.addAttribute("pageMaker", new pageDTO(cri,total));
 	}
 	
 	// <게시판 글쓰기 페이지>로 이동

@@ -28,13 +28,13 @@
                 	<span></span> 
                 	<div><a href="/join">회원가입</a></div>
                 </c:if>
-                <div class="logout">
-                    <c:if test="${login!=null}">
-                        <div>${login.id}님 안녕하세요</div>
-                        <span></span>
-                        <div><a href="/logout">로그아웃</a></div>
-                    </c:if>
-                </div>
+            </div>
+            <div class="logout">
+                <c:if test="${login!=null}">
+                    <p>환영합니다</p>
+                    <span></span>
+                    <div><a href="/logout">로그아웃</a></div>
+                </c:if>
             </div>
             
         </div>
