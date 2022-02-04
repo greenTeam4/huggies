@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.huggies.mapper.BoardMapper">
 	<insert id="write">
-		insert huggiest(category, title, content, pin)
+		insert huggiest(category, title, content, writer, pin)
 		value (
 		<choose>
 			<when test="category == 'notice'.toString()">
@@ -23,7 +23,7 @@
 				'상품'
 			</when>
 		</choose>
-		,#{title},#{content},
+		,#{title},#{content},#{writer},
 		<choose>
 			<when test="category == 'notice'.toString()">
 				1
@@ -47,13 +47,13 @@
 					or content like concat('%',#{keyword},'%')
 					or writer like concat('%',#{keyword},'%')
 			  </if>
-			
+			  order by pin desc, regdate desc
 			) as boardList
 	<![CDATA[
 	 	where rownum > (#{pageNum}-1)*#{amount} 
 		and rownum <= #{pageNum}*#{amount}
 	]]>
-		order by pin desc, regdate desc
+
 	</select>
 	
 	<select id="detail" resultType="org.huggies.domain.BoardDTO">

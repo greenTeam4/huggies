@@ -51,11 +51,13 @@
 		</div><!--bd_search-->
 		
 		<div class="board_main" >
-		    <div class="write">
-		        <a href="/write">
-		            <button class="btn_write">글쓰기</button>
-		        </a>
-		    </div>
+			<c:if test="${login != null}">
+			    <div class="write">
+			        <a href="/write">
+			            <button class="btn_write">글쓰기</button>
+			        </a>
+			    </div>
+		    </c:if>
 		    <table class="board_list">
 		        <thead >
 		            <tr class="table_title">

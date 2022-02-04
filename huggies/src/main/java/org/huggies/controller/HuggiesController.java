@@ -25,8 +25,6 @@ public class HuggiesController {
 	// <게시판 목록 페이지>로 이동
 	@GetMapping("list")
 	public void list(Criteria cri,Model model) {
-		System.out.println("/list="+cri);
-		
 		model.addAttribute("list", service.list(cri));
 		int total=service.getTotalCount(cri);
 		model.addAttribute("pageMaker", new pageDTO(cri,total));

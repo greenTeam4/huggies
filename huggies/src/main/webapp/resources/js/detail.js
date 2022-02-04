@@ -24,6 +24,15 @@ $(document).ready(function(){
          
          $("#relist").html(str);
          
+   
+        const sessionId = $("#session").val();
+         
+        /*console.log(sessionId);*/
+        
+        if(sessionId != "administrator1"){
+	       	 $(".modBtn").hide();
+	       	 $(".removeBtn").hide();
+        }
       });
    }   
    // showList 함수 선언 끝

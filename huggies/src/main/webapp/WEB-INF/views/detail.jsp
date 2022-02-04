@@ -46,30 +46,36 @@
          
            <div class="board__content">
                ${detail.content}
+               <c:if test="${detail.writer == login.name}">
                <div class="board__btns">
                   <a href="/modify?bno=${detail.bno}">글 수정</a>
                   <a href="/remove?bno=${detail.bno}">글 삭제</a>
                </div>
+               </c:if>
            </div>
            
            <!-- 댓글 영역 -->
            <div class="board__reply">
-              <h3>댓글</h3>
+              <input id="bno" type="hidden" value="${detail.bno}">
+              <c:if test="${login.id == 'administrator1'}">
+	              <h3>댓글</h3>
+	              <div>
+	                 <textarea id="reply" maxlength="1000" cols="125" rows="3" required></textarea>
+	                 <div class="board__reply-bottom">
+	                    <label for="replyer">작성자</label>
+	                    <input id="replyer" type="text" value="${login.name}"/>
+	                    <button id="addReply">댓글 작성</button>
+	                 </div>
+	              </div>
+              </c:if>
               <div>
-                 <textarea id="reply" maxlength="1000" cols="125" rows="3" required></textarea>
-                 <div class="board__reply-bottom">
-                    <input id="bno" type="hidden" value="${detail.bno}">
-                    <label for="replyer">작성자</label>
-                    <input id="replyer" type="text"/>
-                    <button id="addReply">댓글 작성</button>
-                 </div>
-              </div>
-              <div>
-                 <ul id="relist"></ul>
+                 <input id="session" type="hidden" value="${login.id}"/>
+                 <ul id="relist">
+                 </ul>
               </div>
               
               <!-- Modal -->
-                <div class="modal">
+               <div class="modal">
                <div class="modal-content">
                    <div class="modal-header">
                        <h4 class="modal-title">댓글 수정하기</h4>
@@ -92,7 +98,7 @@
                        <button type="button" id="insideCloseBtn">Close</button>
                    </div>
                </div>   <!-- .modal-content 끝 -->
-                </div>   <!-- .modal 끝 -->
+               </div>   <!-- .modal 끝 -->
                 
            </div>
            

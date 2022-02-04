@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -27,7 +28,9 @@
             <div class="write__header">
                 <div class="write__header-select">
                     <select name="category">
-                        <option value="notice">공지사항(관리자만 선택 가능합니다)</option>
+                    	<c:if test="${login.id == 'administrator1'}">
+                        	<option value="notice">공지사항(관리자만 선택 가능합니다)</option>
+                        </c:if>
                         <option value="order/pay" selected>주문/결제</option>
                         <option value="delivery">배송</option>
                         <option value="refund/exchange/return">환불/교환/반품</option>
@@ -35,6 +38,7 @@
                     </select>
                 </div>
                 <input name="title" maxlength="50" class="write__header-title" type="text" placeholder="제목을 입력하세요." required>
+                <input name="writer" value="${login.name}" type="hidden">
             </div>
 
             <div class="write__box">
@@ -51,7 +55,6 @@
             </div>
         </form>
     </div>
-    
     <%@ include file="footer.jsp" %>
 </body>
 </html>
