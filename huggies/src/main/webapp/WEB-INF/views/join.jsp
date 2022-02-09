@@ -95,7 +95,7 @@
 				</tr>
 			</table>
 			<div class="lastBtn">
-				<button type="submit" class="submit">확인</button>
+				<button type="submit" class="submit" id="submit">확인</button>
 				<button><a href="/login">취소</a></button>
 			</div>
 		</form>
