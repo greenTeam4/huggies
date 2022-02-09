@@ -68,7 +68,7 @@
           <li class="item_btn">
             <a href=""><span>그린핑거 팬티</span></a>
           </li>
-          <li class="item_btn"s>
+          <li class="item_btn">
             <a href=""><span>굿나이트</span></a>
           </li>
         </ul><!--list_tab-->
@@ -77,7 +77,8 @@
           <div class="btn_txt">
             찾으시는 제품을 검색해주세요!
           </div>
-          <form>
+          
+          <form id="actionForm3" action="/product" method="get">
               <fieldset class="pd_field">
                   <legend>검색</legend>
                   <input type="text" id="search_product" class="search_product" title="검색어">
@@ -85,6 +86,9 @@
                       <span class="sch_icon">검색</span>
                   </button>
               </fieldset>
+              
+            <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+	    	<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
           </form>
         </div><!--pd_sh-->
 
@@ -104,160 +108,43 @@
         </div>
 
         <ul class="total_item">
+        <c:forEach items="${product}">
           <li>
             <a href="">
               <p class="pd_img"><img src="../resources/img/pd_img01.jpg" alt=""></p>
               <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
+                  <span class="pd_name">하기스 맥스드라이 2단계 공용</span>
+                  <span class="pd_price">50,500원</span>
               </p>
           </a>
           </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img02.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img03.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img04.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img05.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img06.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img02.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img01.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img05.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img03.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img06.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
-          <li>
-            <a href="">
-              <p class="pd_img"><img src="../resources/img/pd_img04.jpg" alt=""></p>
-              <p class="pd_txt">
-                  <span class="pd_name">
-                       하기스 맥스드라이 2단계 공용<br>
-                      50,500원
-                  </span>
-              </p>
-          </a>
-          </li>
+		</c:forEach>
         </ul>
-
-      <div class="prev_next">
-        <ul class="inner_next">
-            <li class="link_page on"><a href="#">1</a></li>
-            <li class="link_page"><a href="#">2</a></li>
-            <li class="link_page"><a href="#">3</a></li>
-            <li class="link_page"><a href="#">4</a></li>
-            <li class="link_page"><a href="#">5</a></li>
-            <li class="link_page"><a href="#">6</a></li>
-            <li class="link_page"><a href="#">7</a></li>
-            <li class="link_page"><a href="#">8</a></li>
-            <li class="link_page"><a href="#">9</a></li>
-            <li class="link_page"><a href="#">10</a></li>
-            <li class="pgN">
-                <a href="#">
-                    <span class="bd_next">다음</span>
-                </a>
-           </li>
-        </ul>
-      </div><!--prev_next-->
+        
+		
+   		<div class="prev_next">
+	    <ul class="inner_next">
+               <c:if test="${pageMaker.prev}">
+                  	<li class="prev paginate_button">
+                  		<a href="${pageMaker.startPage-1}">
+                  			<span >이전</span>
+                  		</a>
+                  	</li>
+               </c:if>	  
+	        <c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
+		   		<li class="link_page paginate_button">
+		   			<a href="${num}" class="${pageMaker.cri.pageNum == num ? 'on' : 'link_page'}" >${num}</a>
+		   		</li>	
+	   		</c:forEach> 
+	        <c:if test="${pageMaker.next}">
+	        	<li class="next paginate_button">
+		            <a href="${pageMaker.endPage+1}">
+		                <span>다음</span>
+		            </a>	
+		       </li>
+	        </c:if>
+	    </ul>
+	</div><!--prev_next-->
 
       </div><!--product_main-->
 
