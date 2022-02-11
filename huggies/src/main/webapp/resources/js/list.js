@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
 	var actionForm =$("#actionForm")
-	var actionForm2 =$("#actionForm2")
+
 //	페이지 클릭한곳으로 이동
 	$(".paginate_button a").on("click",function(e){
 		e.preventDefault();
@@ -15,8 +15,8 @@ $(document).ready(function(){
 	$("button[type='submit']").on("click",function(e){
 		e.preventDefault();
 
-		actionForm2.find("input[name='link_page']").val("1") 
-		actionForm2.submit();
+		actionForm.find("input[name='pageNum']").val("1") 
+		actionForm.submit();
 	})
 
 	

@@ -90,6 +90,7 @@
                       <span class="sch_icon">검색</span>
                   </button>
               </fieldset>
+              
             <input type="hidden" name="order" value="${pageMaker.cri.order}">
             <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
 	    	<input type="hidden" name="amount" value="${pageMaker.cri.amount}">

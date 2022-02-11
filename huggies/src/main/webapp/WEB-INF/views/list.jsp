@@ -38,7 +38,7 @@
 		        <h2>무엇을 도와드릴까요?</h2>
 		    </div>
 		    <div class="bd_sh">
-		        <form id="actionForm2" action="/list" method="get">
+		        <form id="actionForm" action="/list" method="get">
 		            <fieldset class="bd_field">
 		                <legend>검색</legend>
 		                <input type="text"  name="keyword" value="${pageMaker.cri.keyword}" id="search_board" class="search_board" title="검색어" placeholder="궁금한 점이 있이면 검색해주세요.">
@@ -46,6 +46,9 @@
 		                    <span class="sch_icon">검색</span>
 		                </button>
 		            </fieldset>
+		            
+		            <input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
+	    			<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
 		        </form>
 		    </div>
 		</div><!--bd_search-->
@@ -101,10 +104,6 @@
 		    </table>
 		</div><!--board_main-->
 
-		<form id="actionForm" action="/list" method="get">
-			<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum}">
-	    	<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
-		</form>
 		 
 		<div class="prev_next">
 		    <ul class="inner_next">
