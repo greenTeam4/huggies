@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
     
 <footer id="footer">
-	동규 수정
     <div class="footerIn">
         <div class="footer1">
             <div class="f_logo">유한킴벌리로고</div>
