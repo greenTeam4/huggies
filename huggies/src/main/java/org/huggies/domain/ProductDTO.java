@@ -1,24 +1,42 @@
 package org.huggies.domain;
 
 public class ProductDTO {
-	// 제품 이미지
-	private boolean Pimage;
+	// 업로드된 파일 이름
+	private String fileName;
+	// 업로드된 파일 경로
+	private String uploadPath;
+	// uuid
+	private String uuid;
 	// 제품 이름
-	private String Ptitle;
+	private String ptitle;
 	// 제품 가격
 	private int price;
+	// 날짜
+	private String regdate;
 	
-	public boolean isPimage() {
-		return Pimage;
+	public String getFileName() {
+		return fileName;
 	}
-	public void setPimage(boolean pimage) {
-		Pimage = pimage;
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
-	public String getPname() {
-		return Ptitle;
+	public String getUploadPath() {
+		return uploadPath;
 	}
-	public void setPname(String ptitle) {
-		Ptitle = ptitle;
+	public void setUploadPath(String uploadPath) {
+		this.uploadPath = uploadPath;
+	}
+	public String getUuid() {
+		return uuid;
+	}
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+	public String getPtitle() {
+		return ptitle;
+	}
+	public void setPtitle(String ptitle) {
+		this.ptitle = ptitle;
 	}
 	public int getPrice() {
 		return price;
@@ -27,10 +45,22 @@ public class ProductDTO {
 		this.price = price;
 	}
 	
+	public String getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
 	@Override
 	public String toString() {
-		return "ProductDTO [Pimage=" + Pimage + ", Ptitle=" + Ptitle + ", price=" + price + "]";
+		return "ProductDTO [fileName=" + fileName + ", uploadPath=" + uploadPath + ", uuid=" + uuid + ", ptitle="
+				+ ptitle + ", price=" + price + ", regdate=" + regdate + "]";
 	}
+	
+	
+	
+	
+	
 	
 	
 	

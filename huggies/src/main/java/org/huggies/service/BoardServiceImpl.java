@@ -47,10 +47,7 @@ public class BoardServiceImpl implements BoardService{
 		bmapper.remove(board);
 	}
 
-	@Override
-	public void cntupdate(BoardDTO board) {
-		// TODO Auto-generated method stub
-		
-	}
+
+	
 
 }

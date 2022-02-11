@@ -164,9 +164,30 @@ a{
 }
 
 /* product_main */
-
+.product_main{
+	position:relative;
+}
 
 /* search_info */
+
+
+.Pmore{
+    position: absolute;
+    top: 5px;
+    left: 150px;
+}
+
+.btn_Pmore{
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    background-color: rgb(252, 240, 221);
+    border: solid 1px rgb(255, 196, 102);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
 
 .search_info select{
     width: 130px;
@@ -251,36 +272,45 @@ a{
     justify-content: center;  
 }
 
-.link_page , .pgN{
+.link_page , .next , .prev{
     margin: 0 10px;
 }
 
 .link_page a{
     display: inline-block;
     width: 20px;
-    color: #555;
+
 }
 
-.link_page a:hover{
+.link_page{ color: #555;}
+
+.on{ color: #e43530;}
+
+
+
+
+.link_page a:hover ,.next a:hover , .prev a:hover{
     text-decoration: underline;
 }
 
-.pgN a{
+.next a , .prev a{
     display: inline-block;
     width: 30px;
     color: #555;
     padding-right: 20px;
-    background-image: url(../img/page_next.png);
     background-size: 20px;
     background-repeat: no-repeat;
-    background-position: right;
+   
 }
 
-.pgN a:hover{
-    text-decoration: underline;
-}
+.next a{
+	background-image: url(../img/page_next.png);
+	padding-right: 20px;
+	background-position: right;
+	}
 
-.on a{
-   text-decoration: underline;
-   color: #e43530; 
-}
+.prev a{
+	background-image: url(../img/page_previous.png);
+	padding-left: 20px;
+	background-position: left;
+	}

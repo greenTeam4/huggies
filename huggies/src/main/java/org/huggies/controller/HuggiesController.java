@@ -71,15 +71,7 @@ public class HuggiesController {
 		return "redirect:/list";
 	}
 	
-	/*// <회원가입 페이지>로 이동
-	@GetMapping("join")
-	public void join() {
-	}
-	
-	// <로그인 페이지>로 이동
-	@GetMapping("login")
-	public void login() {
-	}*/
+
 	
 	
 	

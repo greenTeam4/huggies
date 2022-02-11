@@ -7,7 +7,8 @@ public class Criteria {
 	private int amount;
 	// 검색 키워드
 	private String keyword;
-	
+	// 옵션
+	private String order;
 	
 	Criteria(){
 		this(1,10); //한페이지에 10개
@@ -36,9 +37,18 @@ public class Criteria {
 		this.keyword = keyword;
 	}
 	
+	
+	
+	public String getOrder() {
+		return order;
+	}
+	public void setOrder(String order) {
+		this.order = order;
+	}
 	@Override
 	public String toString() {
-		return "Criteria [pageNum=" + pageNum + ", amount=" + amount + ", keyword=" + keyword + "]";
+		return "Criteria [pageNum=" + pageNum + ", amount=" + amount + ", keyword=" + keyword + ", order=" + order
+				+ "]";
 	}
 	
 	

@@ -7,7 +7,7 @@
         <nav class="gnb">
             <ul>
                 <li><a href="#">브랜드스토리</a></li>
-                <li><a href="/product">제품별리스트</a></li>
+                <li><a href="/productList">제품별리스트</a></li>
                 <li><a href="#">이벤트</a></li>
                 <li><a href="/list">고객지원 </a></li>
             </ul> 

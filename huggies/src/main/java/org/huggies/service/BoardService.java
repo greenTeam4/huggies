@@ -12,8 +12,6 @@ public interface BoardService {
 	public ArrayList<BoardDTO> list(Criteria cri);
 	// 게시판 페이징에 쓰일 페이징 전체
 	public int getTotalCount(Criteria cri);
-	// 게시판 목록리스트에서 제목을 클릭했을떄 조회수 +1
-	public void cntupdate(BoardDTO board);
 	// 게시판 상세 페이지 설계
 	public BoardDTO detail(BoardDTO board);
 	// 게시판 수정 페이지 설계

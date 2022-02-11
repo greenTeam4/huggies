@@ -3,6 +3,54 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.huggies.mapper.ProductMapper">
+
+		
+		<select id="productList" resultType="org.huggies.domain.ProductDTO">
+				select *
+				from(
+				select @rownum:=@rownum+1 as rownum, pt.* 
+				from (select @rownum:=0) as tmp,
+					  productList as pt
+					  
+				  <if test="keyword != null">
+					    where ptitle like concat('%',#{keyword},'%')
+						or price like concat('%',#{keyword},'%')
+				  </if>
+				  
+				<choose>
+					<when test="order == 'N'.toString()">
+						order by regdate desc
+					</when>
+					<when test="order == 'H'.toString()">
+						order by price desc
+					</when>
+					<when test="order == 'L'.toString()">
+					  	order by price 
+					</when>
+					<when test="order == 'G'.toString()">
+						order by binary(ptitle) 
+					</when>
+
+				</choose>
+				  
+				) as productList
+				<![CDATA[
+				 	where rownum > (#{pageNum}-1)*#{amount} 
+					and rownum <= #{pageNum}*12
+				]]>
+		</select>
+		
+		
+		<select id="getTotalCount" resultType="int"> <!-- 임의로 정한 200에 대한 것 -->
+			select count(*) from productList
+			<if test="keyword != null">
+				where ptitle like concat('%',#{keyword},'%')
+				or price like concat('%',#{keyword},'%')
+			</if>
+			
+			
+		</select>
 	
+
 
 </mapper>
