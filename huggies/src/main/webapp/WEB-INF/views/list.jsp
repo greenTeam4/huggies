@@ -51,7 +51,7 @@
 	    			<input type="hidden" name="amount" value="${pageMaker.cri.amount}">
 		        </form>
 		    </div>
-		</div><!--bd_search-->
+		</div><!--bd_search --->
 		
 		<div class="board_main" >
 			<c:if test="${login != null}">
