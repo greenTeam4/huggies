@@ -102,7 +102,7 @@
 
 
       <div class="product_main">
-      	<c:if test="${login != null}">
+      	<c:if test="${login.id == 'administrator1'}">
 		   <div class="Pmore">
 		        <a href="/addProduct">
 		            <button class="btn_Pmore">상품추가</button>
@@ -123,7 +123,8 @@
         <c:forEach items="${productList}" var="List">
           <li>
             <a href="">
-              <p class="pd_img"><img src="${List.fileName}" alt=""></p>
+            	<!-- ${List.uploadPath} : \, need : /-->
+              <p class="pd_img"><img src="/display?fileName=${List.uploadPath}/${List.uuid}_${List.fileName}" alt=""></p>
               <p class="pd_txt">
                   <span class="pd_name">${List.ptitle}</span>
                   <span class="pd_price">${List.price}</span>
@@ -166,7 +167,6 @@
           
 
     </div> <!--product_contents-->
-
 
     <%@ include file="footer.jsp" %>
   </div> <!--#wrap-->

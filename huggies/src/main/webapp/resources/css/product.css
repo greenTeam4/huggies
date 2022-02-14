@@ -314,3 +314,21 @@ a{
 	padding-left: 20px;
 	background-position: left;
 	}
+	
+
+
+.write{
+    position: absolute;
+    top: -40px;
+    right: 15px;
+}
+
+.btn_write{
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    background-color: rgb(252, 240, 221);
+    border: solid 1px rgb(255, 196, 102);
+    border-radius: 10px;
+    cursor: pointer;
+}
