@@ -54,7 +54,7 @@
 		</div><!--bd_search-->
 		
 		<div class="board_main" >
-			<c:if test="${login.id == 'administrator1'}">
+			<c:if test="${login != null}">
 			    <div class="write">
 			        <a href="/write">
 			            <button class="btn_write">글 작성</button>
