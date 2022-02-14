@@ -6,7 +6,12 @@
 
 		
 		<select id="productList" resultType="org.huggies.domain.ProductDTO">
-				select *
+				select uuid,
+						replace(uploadpath,'\\','/') uploadpath,
+				        filename,
+				        ptitle,
+				        price,
+				        regdate
 				from(
 				select @rownum:=@rownum+1 as rownum, pt.* 
 				from (select @rownum:=0) as tmp,
@@ -51,6 +56,9 @@
 			
 		</select>
 	
-
+		<insert id="addProduct">
+			insert into productList (uuid, uploadpath, filename, ptitle, price)
+			values (#{uuid}, #{uploadPath}, #{fileName}, #{ptitle}, #{price})
+		</insert>
 
 </mapper>

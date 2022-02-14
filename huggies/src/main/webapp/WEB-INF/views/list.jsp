@@ -54,7 +54,7 @@
 			<c:if test="${login.id == 'administrator1'}">
 			    <div class="write">
 			        <a href="/write">
-			            <button class="btn_write">상품 등록</button>
+			            <button class="btn_write">글 작성</button>
 			        </a>
 			    </div>
 		    </c:if>

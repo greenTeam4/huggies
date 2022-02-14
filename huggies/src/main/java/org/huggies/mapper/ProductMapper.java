@@ -10,4 +10,6 @@ public interface ProductMapper {
 	public ArrayList<ProductDTO> productList(Criteria cri);
 	// 게시판 페이징에 쓰일 전체 페이지
 	public int getTotalCount(Criteria cri);
+	// 제품 등록 설계
+	public void addProduct(ProductDTO product);
 }
